@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi nena linda</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e3d59;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: white;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px white;
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Crear muchas estrellas */
+        /* Aquí puedes agregar más estrellas si lo deseas */
+        .star:nth-child(1) { top: 10%; left: 20%; }
+        .star:nth-child(2) { top: 15%; left: 50%; }
+        .star:nth-child(3) { top: 25%; left: 30%; }
+        .star:nth-child(4) { top: 40%; left: 80%; }
+        .star:nth-child(5) { top: 70%; left: 15%; }
+        .star:nth-child(6) { top: 80%; left: 60%; }
+        .star:nth-child(7) { top: 60%; left: 70%; }
+        .star:nth-child(8) { top: 30%; left: 10%; }
+        .star:nth-child(9) { top: 50%; left: 90%; }
+        .star:nth-child(10) { top: 90%; left: 40%; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Para la niña más linda del mundo</h1>
+        <h2>Te Amo mucho mi Belu <3</h2>
+        <button id="flower-button" onclick="window.location.href='index.html';">Haz click aquí</button>
+    </div>
+
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <script>
+        // Desplazar al botón al cargar la página
+        window.onload = function() {
+            const button = document.getElementById('flower-button');
+            button.scrollIntoView({ behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>
+
